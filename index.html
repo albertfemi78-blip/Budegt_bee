@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BudgetBasics is an interactive financial awareness learning website for students.">
+  <title>BudgetBasics | Student Financial Awareness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="#home" class="logo"><span class="logo-mark">₿</span> Budget<span>Basics</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu">☰</button>
+      <div class="nav-menu" id="navMenu">
+        <a href="#budgeting">Budgeting</a>
+        <a href="#needs-wants">Needs vs Wants</a>
+        <a href="#rule">50-30-20</a>
+        <a href="#savings">Savings</a>
+        <a href="#expenses">Expenses</a>
+        <a href="#mistakes">Mistakes</a>
+        <a href="#infographics">Infographics</a>
+        <a href="#chatbot">AI Assistant</a>
+        <a href="#contact">Contact</a>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">◐</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="ticker" aria-label="Financial tips">
+    <div class="ticker-track">
+      <span>💡 Track your spending before you try to reduce it.</span>
+      <span>🎯 Give every savings goal a target and a deadline.</span>
+      <span>🧠 A budget is a plan for your money, not a punishment.</span>
+      <span>💡 Track your spending before you try to reduce it.</span>
+    </div>
+  </div>
+
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">STUDENT MONEY SKILLS</p>
+          <h1>Make your money work <span>with a plan.</span></h1>
+          <p class="hero-text">Learn budgeting, saving, smart spending and financial decision-making through simple lessons and interactive tools.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#budgeting">Start Learning</a>
+            <a class="btn btn-secondary" href="#rule">Try Calculator</a>
+          </div>
+          <div class="hero-meta">
+            <span>👥 Visitors: <strong id="visitorCount">0</strong></span>
+            <span>🕒 <strong id="dateTime">--</strong></span>
+          </div>
+        </div>
+        <div class="hero-card reveal">
+          <div class="hero-card-top"><span>Monthly money snapshot</span><span class="status-dot">● Learning</span></div>
+          <div class="mini-balance">₦120,000</div>
+          <p>Sample student income</p>
+          <div class="mini-bars">
+            <div><span>Needs</span><b style="width:50%"></b></div>
+            <div><span>Wants</span><b style="width:30%"></b></div>
+            <div><span>Savings</span><b style="width:20%"></b></div>
+          </div>
+          <div class="hero-tip">“Small, consistent choices can make a budget easier to manage.”</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <div class="container">
+        <div class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="contentSearch" type="search" placeholder="Search lessons, tips, mistakes or infographics..." aria-label="Search learning content">
+          <select id="topicFilter" aria-label="Filter by topic">
+            <option value="all">All topics</option>
+            <option value="budgeting">Budgeting</option>
+            <option value="saving">Saving</option>
+            <option value="spending">Spending</option>
+            <option value="mistakes">Money mistakes</option>
+          </select>
+        </div>
+        <p id="searchMessage" class="search-message" hidden>No matching content found. Try another keyword or topic.</p>
+      </div>
+    </section>
+
+    <section id="budgeting" class="section searchable" data-topic="budgeting" data-keywords="budget income expenses needs wants savings basics">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">01 · BUDGETING BASICS</p>
+          <h2>Know where your money goes.</h2>
+          <p>Understand the building blocks of a personal budget before you start making decisions.</p>
+        </div>
+        <div class="concept-grid">
+          <article class="concept-card"><span>💰</span><h3>Income</h3><p>Money you receive, such as allowance, salary, gifts or a side-hustle payment.</p></article>
+          <article class="concept-card"><span>🧾</span><h3>Expenses</h3><p>Money you spend on goods, services, bills, transport, food and other activities.</p></article>
+          <article class="concept-card"><span>🏠</span><h3>Needs</h3><p>Essential costs required for basic living, education and safety.</p></article>
+          <article class="concept-card"><span>🎮</span><h3>Wants</h3><p>Things that improve comfort or entertainment but can usually be delayed.</p></article>
+          <article class="concept-card"><span>🐷</span><h3>Savings</h3><p>Money intentionally set aside for goals, emergencies or future plans.</p></article>
+        </div>
+
+        <div class="two-col">
+          <div class="panel">
+            <h3>Sample student monthly budget</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Item</th><th>Type</th><th>Amount</th></tr></thead>
+                <tbody>
+                  <tr><td>Allowance / income</td><td>Income</td><td>₦120,000</td></tr>
+                  <tr><td>Food & transport</td><td>Need</td><td>₦55,000</td></tr>
+                  <tr><td>Entertainment</td><td>Want</td><td>₦18,000</td></tr>
+                  <tr><td>Phone/data</td><td>Need</td><td>₦12,000</td></tr>
+                  <tr><td>Savings</td><td>Goal</td><td>₦25,000</td></tr>
+                  <tr><td>Other</td><td>Flexible</td><td>₦10,000</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="panel quiz-panel">
+            <h3>Quick knowledge check</h3>
+            <p>Which is usually a <strong>need</strong>?</p>
+            <div class="quiz-options">
+              <button data-answer="wrong">New game skin</button>
+              <button data-answer="correct">Transport to school</button>
+              <button data-answer="wrong">Concert ticket</button>
+            </div>
+            <div id="quizResult" class="feedback" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="needs-wants" class="section alt searchable" data-topic="spending" data-keywords="needs wants classify purchase decision spending">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">02 · NEEDS VS WANTS</p>
+          <h2>Pause before you purchase.</h2>
+          <p>Classify each item and learn a simple decision process for non-essential spending.</p>
+        </div>
+        <div class="classifier">
+          <div class="classification-card">
+            <p class="small-label">CLASSIFY THIS ITEM</p>
+            <div id="itemEmoji" class="item-emoji">🎧</div>
+            <h3 id="itemName">New headphones</h3>
+            <div class="choice-row">
+              <button class="choice need" data-choice="need">Need</button>
+              <button class="choice want" data-choice="want">Want</button>
+            </div>
+            <p id="classificationFeedback" class="feedback" aria-live="polite">Choose an answer to continue.</p>
+          </div>
+          <div class="decision-guide">
+            <h3>The 3-question pause</h3>
+            <div class="guide-step"><b>01</b><span>Do I need it for health, safety, school or basic living?</span></div>
+            <div class="guide-step"><b>02</b><span>Do I already own something that does the job?</span></div>
+            <div class="guide-step"><b>03</b><span>Could I wait 24–48 hours before buying it?</span></div>
+            <div class="guide-result">If you can wait, compare prices and review your budget first.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rule" class="section searchable" data-topic="budgeting" data-keywords="50 30 20 rule calculator needs wants savings income">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">03 · 50-30-20 RULE</p>
+          <h2>Turn one income number into a simple plan.</h2>
+          <p>The 50/30/20 rule is a budgeting guideline: 50% needs, 30% wants and 20% savings or debt goals.</p>
+        </div>
+        <div class="calculator panel">
+          <div class="calc-input">
+            <label for="incomeInput">Monthly income (₦)</label>
+            <input id="incomeInput" type="number" min="0" value="120000">
+            <button class="btn btn-primary" id="calculateRule">Calculate</button>
+          </div>
+          <div class="rule-results">
+            <div class="rule-item"><div><span>Needs</span><strong id="needsAmount">₦60,000</strong></div><div class="progress"><span id="needsBar" style="width:50%"></span></div><small>50%</small></div>
+            <div class="rule-item"><div><span>Wants</span><strong id="wantsAmount">₦36,000</strong></div><div class="progress"><span id="wantsBar" style="width:30%"></span></div><small>30%</small></div>
+            <div class="rule-item"><div><span>Savings</span><strong id="savingsAmount">₦24,000</strong></div><div class="progress"><span id="savingsBar" style="width:20%"></span></div><small>20%</small></div>
+          </div>
+        </div>
+        <div class="note"><strong>Remember:</strong> This is a guideline, not a rule that fits every person. Your real percentages can change based on income, living costs, debt, family responsibilities and goals.</div>
+      </div>
+    </section>
+
+    <section id="savings" class="section alt searchable" data-topic="saving" data-keywords="savings goal target contribution months progress tips">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">04 · SAVINGS GOALS</p>
+          <h2>Give your savings a destination.</h2>
+        </div>
+        <div class="two-col">
+          <div class="panel form-grid">
+            <label>Goal name<input id="goalName" type="text" value="New laptop"></label>
+            <label>Target amount (₦)<input id="goalTarget" type="number" min="0" value="300000"></label>
+            <label>Current savings (₦)<input id="goalCurrent" type="number" min="0" value="60000"></label>
+            <label>Monthly contribution (₦)<input id="goalMonthly" type="number" min="1" value="30000"></label>
+            <button class="btn btn-primary" id="calculateGoal">Update Goal</button>
+          </div>
+          <div class="goal-card">
+            <span class="small-label">YOUR GOAL</span>
+            <h3 id="goalTitle">New laptop</h3>
+            <div class="goal-amount"><strong id="goalCurrentDisplay">₦60,000</strong><span> / <span id="goalTargetDisplay">₦300,000</span></span></div>
+            <div class="progress large"><span id="goalBar" style="width:20%"></span></div>
+            <div class="goal-stats"><span>Remaining <b id="goalRemaining">₦240,000</b></span><span>Estimated <b id="goalMonths">8 months</b></span></div>
+            <p id="goalTip">Tip: automate a small amount after you receive your income.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="expenses" class="section searchable" data-topic="budgeting" data-keywords="expense planner table add edit remove balance spending">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">05 · EXPENSE PLANNER</p>
+          <h2>Track your spending.</h2>
+          <p>Your entries are kept only in this browser session. No account or backend is used.</p>
+        </div>
+        <div class="panel">
+          <form id="expenseForm" class="expense-form">
+            <label>Date<input type="date" id="expenseDate" required></label>
+            <label>Category<select id="expenseCategory"><option>Food</option><option>Transport</option><option>Education</option><option>Entertainment</option><option>Other</option></select></label>
+            <label>Description<input type="text" id="expenseDescription" placeholder="e.g. Lunch" required></label>
+            <label>Amount (₦)<input type="number" id="expenseAmount" min="0" required></label>
+            <button class="btn btn-primary" type="submit" id="expenseSubmit">Add expense</button>
+          </form>
+          <div class="table-wrap">
+            <table id="expenseTable">
+              <thead><tr><th>Date</th><th>Category</th><th>Description</th><th>Amount</th><th>Action</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="expense-summary"><span>Total expenses <strong id="expenseTotal">₦0</strong></span><span>Planner balance <strong id="expenseBalance">₦120,000</strong></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mistakes" class="section alt searchable" data-topic="mistakes" data-keywords="mistakes impulse spending budget debt savings emergency">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">06 · MONEY MISTAKES</p>
+          <h2>Learn from common student scenarios.</h2>
+        </div>
+        <div class="accordion">
+          <details><summary>Spending first and saving “whatever is left”</summary><div><p><strong>Scenario:</strong> A student spends their allowance throughout the month and rarely saves.</p><p><strong>Try instead:</strong> Set aside a realistic savings amount near the beginning of the month.</p></div></details>
+          <details><summary>Ignoring small recurring expenses</summary><div><p><strong>Scenario:</strong> Small daily purchases look harmless but add up.</p><p><strong>Try instead:</strong> Track them for one week and review the total.</p></div></details>
+          <details><summary>Buying because of pressure</summary><div><p><strong>Scenario:</strong> Friends encourage a purchase that was not in the plan.</p><p><strong>Try instead:</strong> Use the 24-hour pause and check whether the purchase fits your wants budget.</p></div></details>
+          <details><summary>Having no emergency buffer</summary><div><p><strong>Scenario:</strong> An unexpected school or transport cost appears.</p><p><strong>Try instead:</strong> Build a small emergency reserve gradually.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="infographics" class="section searchable" data-topic="budgeting" data-keywords="infographics 50 30 20 budget saving needs wants">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">07 · INFOGRAPHICS</p>
+          <h2>Visual learning, one idea at a time.</h2>
+        </div>
+        <div class="filter-row">
+          <button class="filter-btn active" data-info-filter="all">All</button>
+          <button class="filter-btn" data-info-filter="budgeting">Budgeting</button>
+          <button class="filter-btn" data-info-filter="saving">Saving</button>
+          <button class="filter-btn" data-info-filter="spending">Spending</button>
+        </div>
+        <div class="info-grid">
+          <article class="info-card" data-info-topic="budgeting"><div class="info-art pie-art" role="img" aria-label="Infographic showing a 50 percent needs, 30 percent wants, 20 percent savings budgeting guideline"><b>50</b><span>NEEDS</span><b>30</b><span>WANTS</span><b>20</b><span>SAVE</span></div><h3>50-30-20 at a glance</h3><p>A visual starting point for organizing monthly income.</p></article>
+          <article class="info-card" data-info-topic="saving"><div class="info-art goal-art" role="img" aria-label="Infographic showing savings goal progress from zero to target">🎯<strong>GOAL</strong><div class="fake-progress"><span></span></div><small>Target → Plan → Progress</small></div><h3>Build a savings goal</h3><p>Choose a target, divide the gap by monthly contributions and track progress.</p></article>
+          <article class="info-card" data-info-topic="spending"><div class="info-art pause-art" role="img" aria-label="Infographic showing three questions to ask before buying">⏸<strong>PAUSE</strong><small>Need it?<br>Already own it?<br>Can I wait?</small></div><h3>The purchase pause</h3><p>Use three questions before an unplanned purchase.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="chatbot" class="section alt searchable" data-topic="budgeting" data-keywords="AI chatbot questions budget saving expense advice">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">08 · AI-STYLE ASSISTANT</p>
+          <h2>Ask BudgetBuddy.</h2>
+          <p>A simple pre-programmed educational assistant. It does not connect to an external AI service.</p>
+        </div>
+        <div class="chat panel">
+          <div class="chat-messages" id="chatMessages" aria-live="polite">
+            <div class="bot-message">Hi! I can explain budgeting, savings goals, needs vs wants and the 50-30-20 guideline. What would you like to learn?</div>
+          </div>
+          <div class="suggestions">
+            <button>How do I start a budget?</button>
+            <button>What is the 50-30-20 rule?</button>
+            <button>How can I save money?</button>
+            <button>What is a need?</button>
+          </div>
+          <form id="chatForm" class="chat-form">
+            <input id="chatInput" type="text" placeholder="Ask a budgeting question..." aria-label="Chat message" required>
+            <button class="btn btn-primary">Send</button>
+          </form>
+          <p class="disclaimer">Educational only — this assistant provides general learning information, not personalized financial advice.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section searchable" data-topic="budgeting" data-keywords="about budgetbasics education financial awareness">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">09 · ABOUT US</p>
+          <h2>Financial awareness should be easier to learn.</h2>
+          <p>BudgetBasics is a student-focused educational project designed to make everyday money concepts practical, visual and interactive.</p>
+        </div>
+        <div class="stats">
+          <div><strong>10+</strong><span>Learning areas</span></div>
+          <div><strong>100%</strong><span>Frontend demo</span></div>
+          <div><strong>0</strong><span>Real transactions</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="feedback" class="section alt">
+      <div class="container form-section">
+        <div class="section-heading"><p class="eyebrow">10 · FEEDBACK</p><h2>Tell us what you think.</h2></div>
+        <form id="feedbackForm" class="panel contact-form">
+          <label>Name<input id="feedbackName" required></label>
+          <label>Email<input id="feedbackEmail" type="email" required></label>
+          <label>Rating<select id="feedbackRating" required><option value="">Choose...</option><option>5 - Excellent</option><option>4 - Good</option><option>3 - Okay</option><option>2 - Needs work</option><option>1 - Poor</option></select></label>
+          <label class="full">Feedback<textarea id="feedbackText" rows="5" required minlength="10"></textarea></label>
+          <button class="btn btn-primary" type="submit">Submit Feedback</button>
+          <p id="feedbackMessage" class="success-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container form-section">
+        <div class="section-heading"><p class="eyebrow">11 · CONTACT US</p><h2>Have a question?</h2></div>
+        <form id="contactForm" class="panel contact-form">
+          <label>Name<input id="contactName" required></label>
+          <label>Email<input id="contactEmail" type="email" required></label>
+          <label class="full">Message<textarea id="contactText" rows="5" required minlength="10"></textarea></label>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+          <p id="contactMessage" class="success-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#home" class="logo">₿ Budget<span>Basics</span></a>
+      <p>Learn it. Plan it. Build better money habits.</p>
+      <p>© <span id="year"></span> BudgetBasics · Educational project</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
