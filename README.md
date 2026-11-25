@@ -23,9 +23,7 @@ The goal is to create a digital platform that helps users become more intentiona
 - HTML5
 - CSS3
 - JavaScript
-- Vercel (Deployment)
 
-*Update this section to reflect the exact technologies used in the project.*
 
 ## 📂 Project Structure
 
